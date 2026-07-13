@@ -5,7 +5,8 @@
       "namespace": "android_app",
       "package_name": "com.tradio.radio",
       "sha256_cert_fingerprints": [
-        "8B:A6:9B:4D:17:BE:1A:E2:2B:3A:90:8A:D5:4C:BB:81:16:61:73:AC:BA:AA:7A:37:3A:BC:D2:E8:F1:32:DD:00"
+        "8B:A6:9B:4D:17:BE:1A:E2:2B:3A:90:8A:D5:4C:BB:81:16:61:73:AC:BA:AA:7A:37:3A:BC:D2:E8:F1:32:DD:00",
+        "0B:B8:A2:30:DD:7F:74:9C:C9:6F:E5:DF:AE:8F:A7:88:3D:F9:93:72:46:8E:C6:CA:EB:FF:9E:68:9F:02:1D:CE"
       ]
     }
   }
