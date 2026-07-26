@@ -34,12 +34,17 @@
     <a class="store" href="https://play.google.com/store/apps/details?id=com.tradio.radio">Get it on Google Play</a>
   </main>
   <script>
-    // If TRadio is installed, this intent:// link opens it on the shared station;
-    // otherwise Android sends the user to the Play Store listing.
-    var id = new URLSearchParams(location.search).get('id');
-    if (id) {
+    // If TRadio is installed, this intent:// link opens it on the shared item;
+    // otherwise Android sends the user to the Play Store listing. The whole
+    // query string is forwarded so every share kind (?id= station, ?p= / ?pf=
+    // podcast) round-trips into the app unchanged.
+    var params = new URLSearchParams(location.search);
+    if (params.get('p') || params.get('pf')) {
+      document.getElementById('blurb').textContent = 'Someone shared a podcast with you.';
+    }
+    if (params.get('id') || params.get('p') || params.get('pf')) {
       document.getElementById('open-app').href =
-        'intent://mufwaya2025.github.io/s/?id=' + encodeURIComponent(id) +
+        'intent://mufwaya2025.github.io/s/' + location.search +
         '#Intent;scheme=https;package=com.tradio.radio;end';
     }
   </script>
